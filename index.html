@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:wght@100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="container">
+    <div class="account">
+      <h2>Create an Account</h2>
+
+      <form>
+        <label>First Name
+          <input type="text" name="name">
+        </label>
+
+        <label>Last Name
+          <input type="text" name="last-name">
+        </label>
+
+        <label>Email
+          <input type="email" name="email">
+        </label>
+
+        <p>We'll never share your email with anyone else.</p>
+
+        <label>
+          <input type="radio" name="gender" value="male">
+          Male
+        </label>
+
+        <label>
+          <input type="radio" name="gender" value="female">
+          Female
+        </label>
+
+        <label>Country
+          <select name="country">
+            <option value="select" disabled hidden selected>Select</option>
+            <option value="us">Ukraine</option>
+            <option value="ca">Canada</option>
+            <option value="mx">Romania</option>
+            <option value="mx">Mexico</option>
+            <option value="mx">Brazil</option>
+            <option value="mx">Argentina</option>
+            <option value="mx">Colombia</option>
+            <option value="mx">Peru</option>
+            <option value="mx">Venezuela</option>
+            <option value="mx">Ecuador</option>
+            <option value="mx">Chile</option>
+          </select>
+        </label>
+
+        <label>City
+          <input type="text" name="city">
+        </label>
+
+        <button>Sing Up</button>
+
+        <p>By clicking the 'Sing Up' button, you confirm that you accept our <a href="#">Terms & Conditions</a> and <a
+            href="#">Privacy Policy</a>
+        </p>
+
+        <hr>
+
+        <p>Have an account? <a href="#">Log In</a></p>
+      </form>
+    </div>
+
+    <div class="profile">
+      <h2>Profile</h2>
+
+      <form>
+        <img src="image/profile.png" alt="">
+
+        <label>
+          <input type="file" hidden>
+          <input type="text" placeholder="Upload Photo"><span>Up to 1 MB (300x300 px)</span>
+          <img src="image/photo-icon.svg" alt="">
+        </label>
+
+        <span><button><img src="image/trash-icon.svg" alt=""></button></span>
+
+        <label>Name
+          <input type="text" name="name">
+        </label>
+
+        <label>Email
+          <input type="email" name="email">
+        </label>
+
+        <label>Country
+          <select name="country">
+            <option value="select" disabled hidden selected>Select</option>
+            <option value="us">Ukraine</option>
+            <option value="ca">Canada</option>
+            <option value="mx">Romania</option>
+            <option value="mx">Mexico</option>
+            <option value="mx">Brazil</option>
+            <option value="mx">Argentina</option>
+            <option value="mx">Colombia</option>
+            <option value="mx">Peru</option>
+            <option value="mx">Venezuela</option>
+            <option value="mx">Ecuador</option>
+            <option value="mx">Chile</option>
+          </select>
+        </label>
+
+        <label>City
+          <input type="text" name="city">
+        </label>
+
+        <label>Zip Code
+          <input type="text" name="zip-code">
+        </label>
+
+        <label>Phone Number
+          <input type="text" name="phone-number">
+        </label>
+
+        <button>Update</button>
+        <form>
+    </div>
+  </main>
+</body>
+
+</html>

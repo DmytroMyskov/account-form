@@ -1,0 +1,233 @@
+:root {
+  --font-family: 'Roboto', sans-serif;
+  --font-size: 15px;
+  --font-color: #545454;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  color: var(--font-color);
+  font-weight: 400;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 30px;
+}
+
+.account,
+.profile {
+  width: 570px;
+  height: 590px;
+  padding: 35px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  h2 {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 500;
+    color: #1C1C1C;
+    margin-bottom: 20px;
+  }
+
+  input {
+    outline: none;
+  }
+
+  input:not(:has([type="radio"])):hover,
+  input:not(:has([type="radio"])):focus {
+    border: 1px solid #007BFF;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  label:has([name="country"]) {
+
+    select {
+      border: 1px solid #E4E4E4;
+      border-radius: 5px;
+      height: 38px;
+      padding: 0 10px;
+      cursor: pointer;
+      color: #969696;
+    }
+
+    select:hover,
+    select:active {
+      border: 1px solid #007BFF;
+    }
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: auto 1fr 50%;
+    gap: 20px;
+  }
+
+  a {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    text-decoration: none;
+    color: #007BFF;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.account {
+
+  input {
+    border: 1px solid #E4E4E4;
+    border-radius: 5px;
+    height: 38px;
+  }
+
+  label:has([name="name"]),
+  label:has([value="female"]),
+  label:has(select) {
+    grid-column: span 2;
+  }
+
+  label:has([name="email"]),
+  p,
+  button,
+  hr {
+    grid-column: span 3;
+  }
+
+  label:not(:has([type="radio"])) {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  label:has([type="radio"]) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  p {
+    color: #969696;
+    font-size: 13px;
+  }
+
+  button+p {
+    text-align: center;
+  }
+
+  button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    height: 38px;
+    cursor: pointer;
+  }
+
+  hr {
+    color: #e4e4e4;
+    opacity: 0.5;
+  }
+
+  hr+p {
+    color: #545454;
+    text-align: center;
+    font-size: 15px;
+
+    a {
+      font-weight: 500;
+      text-decoration: none;
+    }
+  }
+}
+
+.profile {
+
+  input {
+    border: 1px solid #E4E4E4;
+    border-radius: 5px;
+    height: 38px;
+  }
+
+  label:has([name="name"], [name="country"], [name="zip-code"]),
+  button:last-child {
+    grid-column: span 2;
+  }
+
+  label:has([type="file"]) {
+    position: relative;
+  }
+
+  [type="file"] {
+    display: none;
+  }
+
+  label:has([type="file"]) {
+
+    input {
+      cursor: pointer;
+      width: 138px;
+      height: 30px;
+      color: #545454;
+    }
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    img {
+      position: absolute;
+      left: 120px;
+      top: 8px;
+      cursor: pointer;
+    }
+
+    span {
+      color: #969696;
+      font-size: 13px;
+      letter-spacing: -0.1px;
+      width: 141px;
+    }
+  }
+
+  button:has(img) {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #E4E4E4;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fff;
+
+    img {
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 38px;
+    cursor: pointer;
+    place-self: start;
+  }
+}

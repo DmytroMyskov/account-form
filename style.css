@@ -45,8 +45,8 @@ body {
     outline: none;
   }
 
-  input:not(:has([type="radio"])):hover,
-  input:not(:has([type="radio"])):focus {
+  input:hover,
+  input:focus {
     border: 1px solid #007BFF;
     font-size: 18px;
     font-weight: 400;
@@ -149,6 +149,8 @@ body {
     font-size: 15px;
 
     a {
+      font-family: 'Roboto', sans-serif;
+      font-size: 15px;
       font-weight: 500;
       text-decoration: none;
     }
@@ -170,6 +172,11 @@ body {
 
   label:has([type="file"]) {
     position: relative;
+    pointer-events: none;
+
+    img {
+      pointer-events: all;
+    }
   }
 
   [type="file"] {
